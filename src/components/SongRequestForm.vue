@@ -1,11 +1,13 @@
 <template>
-  <div class="request-container">
-    <h2>Request a Song</h2>
-    <form @submit.prevent="submitRequest">
-      <input type="text" v-model="songName" placeholder="Enter song name" required />
-      <button type="submit">Send Request</button>
-    </form>
-    <p v-if="successMessage" class="success">{{ successMessage }}</p>
+  <div class="page-wrapper">
+    <div class="request-container">
+      <h2>Request a Song</h2>
+      <form @submit.prevent="submitRequest">
+        <input type="text" v-model="songName" placeholder="Enter song name" required />
+        <button type="submit">Send Request</button>
+      </form>
+      <p v-if="successMessage" class="success">{{ successMessage }}</p>
+    </div>
   </div>
 </template>
 
@@ -48,11 +50,18 @@ export default {
 </script>
 
 <style scoped>
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .request-container {
   text-align: center;
   max-width: 400px;
-  margin: auto;
 }
+
 input {
   width: 100%;
   padding: 8px;
