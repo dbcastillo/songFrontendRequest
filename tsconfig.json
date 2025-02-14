@@ -12,6 +12,11 @@
     }
   ],
   "compilerOptions": {
-    "module": "NodeNext"
-  }
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "types": ["vue"],
+    "jsx": "preserve",
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue"]
 }
